@@ -33,7 +33,9 @@ const AboutUs = () => {
             ))}
           </div>
 
-          <button className="btn btn-primary">Know More About Us <ArrowRight size={18} /></button>
+          <a href="#services" style={{ textDecoration: 'none' }}>
+            <button className="btn btn-primary">Know More About Us <ArrowRight size={18} /></button>
+          </a>
         </div>
 
       </div>

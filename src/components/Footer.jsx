@@ -6,12 +6,11 @@ const Footer = () => {
     <footer style={{ background: 'var(--brand-dark)', color: 'white', paddingTop: '4rem', paddingBottom: '2rem' }}>
       <div className="container">
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem', marginBottom: '3rem' }}>
-          
+
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem', color: 'var(--brand-accent)' }}>
-              <Leaf size={32} />
               <div style={{ lineHeight: '1.1' }}>
-                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: 'white' }}>Nutrition Club</span><br/>
+                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: 'white' }}>Nutrition Club</span><br />
                 <span style={{ fontSize: '0.7rem', fontWeight: '600' }}>Nutrition For Better Life</span>
               </div>
             </div>
@@ -61,9 +60,9 @@ const Footer = () => {
           <div>
             <h4 style={{ fontSize: '1.2rem', fontWeight: '700', marginBottom: '1.5rem', color: 'var(--brand-accent)' }}>Contact Us</h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem', color: 'rgba(255,255,255,0.8)', fontSize: '0.95rem' }}>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}><Phone size={18} color="var(--brand-accent)" /> +91 7975715244</li>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}><Phone size={18} color="var(--brand-accent)" /> +91 79757 15244</li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}><Mail size={18} color="var(--brand-accent)" /> info@nutritionclub.com</li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}><MapPin size={18} color="var(--brand-accent)" /> Your City, Your State, India</li>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}><MapPin size={18} color="var(--brand-accent)" /> Bengaluru, Karnataka, India</li>
             </ul>
             <a href="https://wa.me/917975715244" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'inline-block' }}>
               <button style={{ marginTop: '1.5rem', background: 'var(--brand-accent)', color: 'white', border: 'none', padding: '0.8rem 1.5rem', borderRadius: '8px', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>

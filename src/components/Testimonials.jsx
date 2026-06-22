@@ -17,24 +17,26 @@ const Testimonials = () => {
           <h2 className="section-title">What Our Clients Say</h2>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
-          {reviews.map((review, idx) => (
-            <div key={idx} style={{ background: 'white', padding: '2rem', borderRadius: '15px', boxShadow: 'var(--shadow-sm)' }}>
-              <div style={{ display: 'flex', gap: '0.2rem', marginBottom: '1rem' }}>
-                {[...Array(review.rating)].map((_, i) => <Star key={i} size={16} fill="var(--brand-yellow)" color="var(--brand-yellow)" />)}
-              </div>
-              <p style={{ color: 'var(--text-gray)', fontStyle: 'italic', marginBottom: '1.5rem', fontSize: '0.95rem', lineHeight: '1.6' }}>
-                "{review.text}"
-              </p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <img src={review.avatar} alt={review.name} style={{ width: '40px', height: '40px', borderRadius: '50%', objectFit: 'cover' }} />
-                <div>
-                  <h4 style={{ fontSize: '0.95rem', fontWeight: '700', color: 'var(--text-dark)' }}>{review.name}</h4>
-                  <span style={{ fontSize: '0.8rem', color: 'var(--text-light)' }}>{review.role}</span>
+        <div style={{ overflow: 'hidden', padding: '1rem 0' }}>
+          <div className="testimonial-track">
+            {[...reviews, ...reviews].map((review, idx) => (
+              <div key={idx} style={{ width: '300px', flexShrink: 0, background: 'white', padding: '2rem', borderRadius: '15px', boxShadow: 'var(--shadow-sm)' }}>
+                <div style={{ display: 'flex', gap: '0.2rem', marginBottom: '1rem' }}>
+                  {[...Array(review.rating)].map((_, i) => <Star key={i} size={16} fill="var(--brand-yellow)" color="var(--brand-yellow)" />)}
+                </div>
+                <p style={{ color: 'var(--text-gray)', fontStyle: 'italic', marginBottom: '1.5rem', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                  "{review.text}"
+                </p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                  <img src={review.avatar} alt={review.name} style={{ width: '40px', height: '40px', borderRadius: '50%', objectFit: 'cover' }} />
+                  <div>
+                    <h4 style={{ fontSize: '0.95rem', fontWeight: '700', color: 'var(--text-dark)' }}>{review.name}</h4>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--text-light)' }}>{review.role}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

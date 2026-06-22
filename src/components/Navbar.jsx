@@ -13,7 +13,7 @@ const Navbar = () => {
             <span style={{ color: 'var(--brand-accent)' }}>✓</span> Take the first step towards a healthier, happier you!
           </div>
           <div className="topbar-right">
-            <span>Call / WhatsApp: 7975715244</span>
+            <span>Call / WhatsApp: +91 79757 15244</span>
             <div className="social-icons" style={{ display: 'flex', gap: '0.8rem', alignItems: 'center' }}>
               <span style={{ cursor: 'pointer', display: 'flex' }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></span>
               <span style={{ cursor: 'pointer', display: 'flex' }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></span>
@@ -29,9 +29,7 @@ const Navbar = () => {
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
 
           <div className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <div style={{ width: '32px', height: '32px', background: 'var(--brand-primary)', borderRadius: '50% 50% 10% 50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', position: 'relative' }}>
-              <span style={{ fontSize: '16px', position: 'absolute', top: '2px' }}>🌱</span>
-            </div>
+
             <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
               <span style={{ fontSize: '1.4rem', fontWeight: '800', color: 'var(--brand-primary)' }}>Nutrition Club</span>
               <span style={{ fontSize: '0.65rem', color: 'var(--brand-accent)', fontWeight: '600' }}>Nutrition For Better Life</span>
@@ -48,9 +46,11 @@ const Navbar = () => {
           </ul>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <button className="btn top-cta-btn" style={{ background: 'var(--brand-dark)', color: 'white', padding: '0.6rem 1.2rem', borderRadius: '6px', fontSize: '0.9rem', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
-              <span style={{ fontSize: '1.1rem', marginRight: '5px' }}>🎁</span> Get Free Sample
-            </button>
+            <a href="https://wa.me/917975715244?text=Hi!%20I%20would%20like%20to%20get%20a%20free%20sample." target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <button className="btn top-cta-btn" style={{ background: 'var(--brand-dark)', color: 'white', padding: '0.6rem 1.2rem', borderRadius: '6px', fontSize: '0.9rem', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+                Get Free Sample
+              </button>
+            </a>
             <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
               {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>

@@ -25,8 +25,12 @@ const Home = () => {
           </ul>
 
           <div style={{ display: 'flex', gap: '1rem' }}>
-            <button className="btn btn-primary" style={{ padding: '0.9rem 1.8rem', fontSize: '1rem', borderRadius: '8px' }}><MessageCircle size={18} /> WhatsApp Now</button>
-            <button className="btn btn-outline" style={{ padding: '0.9rem 1.8rem', fontSize: '1rem', borderRadius: '8px', color: 'var(--brand-primary)', borderColor: '#e2e8f0' }}><Calendar size={18} /> Book Free Consultation</button>
+            <a href="https://wa.me/917975715244" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <button className="btn btn-primary" style={{ padding: '0.9rem 1.8rem', fontSize: '1rem', borderRadius: '8px', width: '100%' }}><MessageCircle size={18} /> WhatsApp Now</button>
+            </a>
+            <a href="#contact" style={{ textDecoration: 'none' }}>
+              <button className="btn btn-outline" style={{ padding: '0.9rem 1.8rem', fontSize: '1rem', borderRadius: '8px', color: 'var(--brand-primary)', borderColor: '#e2e8f0', width: '100%' }}><Calendar size={18} /> Book Free Consultation</button>
+            </a>
           </div>
         </div>
 
