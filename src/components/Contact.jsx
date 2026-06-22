@@ -1,61 +1,52 @@
 import React from 'react';
-import { Phone, Video, Send } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="section contact">
-      <div className="container">
-        <h2 className="section-title animate-fade-in-up">Get in Touch</h2>
-        <div className="contact-content">
-          <div className="contact-info animate-fade-in-up delay-200">
-            <h2>Call For Free Sample!</h2>
-            <p>One call may change your life. Reach out to Kumar to start your health journey and join our Zoom app sessions from anywhere.</p>
-            
-            <div className="contact-item mt-4">
-              <div className="contact-icon">
-                <Phone size={28} color="white" />
-              </div>
-              <div className="contact-details">
-                <h3>Phone</h3>
-                <p>+91 7975715244</p>
-                <p>Kumar</p>
-              </div>
-            </div>
+    <section id="contact" style={{ padding: '4rem 0', background: 'var(--brand-primary)', color: 'white' }}>
+      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
 
-            <div className="contact-item">
-              <div className="contact-icon">
-                <Video size={28} color="white" />
+        <div>
+          <h2 style={{ fontSize: '3.5rem', lineHeight: '1.1', fontWeight: '800', marginBottom: '1rem' }}>Get Your<br />Free Consultation</h2>
+          <p style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: '0.9' }}>Take the first step towards a healthier you. Book your free consultation now!</p>
+
+          <div style={{ display: 'flex', gap: '2rem', marginBottom: '2rem' }}>
+            {['100% Free', 'No Obligation', 'Expert Advice'].map((item, idx) => (
+              <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: '600', fontSize: '0.9rem' }}>
+                <span style={{ color: 'var(--brand-yellow)' }}>✓</span> {item}
               </div>
-              <div className="contact-details">
-                <h3>Online Sessions</h3>
-                <p>Anybody Anywhere Login</p>
-                <p>Zoom App in Your Mobile</p>
-              </div>
-            </div>
+            ))}
           </div>
 
-          <div className="contact-form-card animate-fade-in-up delay-400">
-            <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <h3 style={{ fontSize: '1.8rem', fontWeight: '800', marginBottom: '1rem' }}>Send a Message</h3>
-              <input 
-                type="text" 
-                placeholder="Your Full Name" 
-              />
-              <input 
-                type="tel" 
-                placeholder="Your Phone Number" 
-              />
-              <textarea 
-                placeholder="How can we help you achieve your goals?" 
-                rows="5"
-                style={{ resize: 'vertical' }}
-              ></textarea>
-              <button type="button" className="btn btn-accent" style={{ marginTop: '1rem', width: '100%' }}>
-                Submit Request <Send size={20} />
-              </button>
-            </form>
-          </div>
+          <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80" alt="Fresh Vegetables" style={{ width: '80%', borderRadius: '15px', boxShadow: 'var(--shadow-lg)' }} />
         </div>
+
+        <div style={{ background: 'white', padding: '3rem', borderRadius: '20px', boxShadow: 'var(--shadow-lg)', position: 'relative' }}>
+          <div style={{ position: 'absolute', top: '-20px', right: '-20px', background: 'var(--brand-yellow)', color: 'var(--brand-dark)', width: '80px', height: '80px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '800', textAlign: 'center', lineHeight: '1.1', fontSize: '0.8rem', transform: 'rotate(15deg)', boxShadow: 'var(--shadow-md)' }}>
+            100%<br />Satisfaction<br />Guaranteed
+          </div>
+
+          <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div style={{ display: 'flex', gap: '1.5rem' }}>
+              <input type="text" placeholder="Your Name" style={{ flex: 1, padding: '1rem', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '1rem', outline: 'none' }} />
+              <input type="tel" placeholder="Phone Number" style={{ flex: 1, padding: '1rem', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '1rem', outline: 'none' }} />
+            </div>
+            <div style={{ display: 'flex', gap: '1.5rem' }}>
+              <input type="email" placeholder="Email Address" style={{ flex: 1, padding: '1rem', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '1rem', outline: 'none' }} />
+              <select style={{ flex: 1, padding: '1rem', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '1rem', outline: 'none', color: '#64748b', backgroundColor: 'white' }}>
+                <option>Select Goal</option>
+                <option>Weight Loss</option>
+                <option>Weight Gain</option>
+                <option>General Fitness</option>
+              </select>
+            </div>
+            <textarea placeholder="Message (Optional)" rows="4" style={{ width: '100%', padding: '1rem', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '1rem', outline: 'none', resize: 'vertical' }}></textarea>
+
+            <button type="button" style={{ background: 'var(--brand-dark)', color: 'white', padding: '1rem', border: 'none', borderRadius: '8px', fontSize: '1.1rem', fontWeight: '700', cursor: 'pointer' }}>
+              Request Free Consultation
+            </button>
+          </form>
+        </div>
+
       </div>
     </section>
   );
