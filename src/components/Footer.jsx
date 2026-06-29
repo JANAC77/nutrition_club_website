@@ -36,12 +36,12 @@ const Footer = () => {
           <div>
             <h4 style={{ fontSize: '1.2rem', fontWeight: '700', marginBottom: '1.5rem', color: 'var(--brand-accent)' }}>Quick Links</h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', color: 'rgba(255,255,255,0.8)', fontSize: '0.95rem' }}>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#products">Products</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="home">Home</a></li>
+              <li><a href="about">About Us</a></li>
+              <li><a href="services">Services</a></li>
+              <li><a href="products">Products</a></li>
+              <li><a href="gallery">Gallery</a></li>
+              <li><a href="contact">Contact Us</a></li>
             </ul>
           </div>
 

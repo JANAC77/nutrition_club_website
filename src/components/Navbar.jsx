@@ -28,21 +28,21 @@ const Navbar = () => {
       <nav className="navbar glass" style={{ padding: '0.8rem 0', position: 'sticky', top: 0, zIndex: 1000 }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
 
-          <div className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <a href="#home" className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', cursor: 'pointer' }}>
 
             <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
               <span style={{ fontSize: '1.4rem', fontFamily: 'Playfair Display, serif', fontWeight: '800', color: 'var(--brand-dark)' }}>Kumar Wellness</span>
               <span style={{ fontSize: '0.75rem', fontWeight: '600', color: 'var(--brand-accent)', letterSpacing: '0.05em' }}>& Weight Management Coach</span>
             </div>
-          </div>
+          </a>
 
           <ul className="nav-links" style={{ display: 'flex', gap: '2rem', margin: 0, padding: 0 }}>
-            <li><a href="#home" className="active">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="home" className="active">Home</a></li>
+            <li><a href="about">About Us</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="gallery">Gallery</a></li>
+            <li><a href="testimonials">Testimonials</a></li>
+            <li><a href="contact">Contact</a></li>
           </ul>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
@@ -61,12 +61,12 @@ const Navbar = () => {
       {/* Mobile Menu Overlay */}
       <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <ul className="mobile-nav-links">
-          <li><a href="#home" onClick={() => setIsMobileMenuOpen(false)}>Home</a></li>
-          <li><a href="#about" onClick={() => setIsMobileMenuOpen(false)}>About Us</a></li>
-          <li><a href="#services" onClick={() => setIsMobileMenuOpen(false)}>Services</a></li>
-          <li><a href="#gallery" onClick={() => setIsMobileMenuOpen(false)}>Gallery</a></li>
-          <li><a href="#testimonials" onClick={() => setIsMobileMenuOpen(false)}>Testimonials</a></li>
-          <li><a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a></li>
+          <li><a href="home" onClick={() => setIsMobileMenuOpen(false)}>Home</a></li>
+          <li><a href="about" onClick={() => setIsMobileMenuOpen(false)}>About Us</a></li>
+          <li><a href="services" onClick={() => setIsMobileMenuOpen(false)}>Services</a></li>
+          <li><a href="gallery" onClick={() => setIsMobileMenuOpen(false)}>Gallery</a></li>
+          <li><a href="testimonials" onClick={() => setIsMobileMenuOpen(false)}>Testimonials</a></li>
+          <li><a href="contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a></li>
         </ul>
       </div>
     </>
