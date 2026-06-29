@@ -11,25 +11,18 @@ const Stats = () => {
   ];
 
   return (
-    <section className="stats-section" style={{ padding: '4rem 0', background: '#f4f9f5' }}>
+    <section className="stats-section" style={{ padding: '6rem 0', background: 'linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-primary) 100%)', color: 'white' }}>
       <div className="container">
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-          background: '#f9fbf9',
-          padding: '3rem 1rem',
-          borderRadius: '12px',
-          border: '1px solid #e2e8f0',
-          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)'
-        }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2.5rem' }}>
           {statsData.map((stat, idx) => (
-            <div key={idx} style={{ textAlign: 'center', padding: '0.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', borderRight: idx !== statsData.length - 1 ? '1px solid #e2e8f0' : 'none' }}>
+            <div key={idx} style={{ textAlign: 'center', padding: '0.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <div style={{
-                width: '64px',
-                height: '64px',
+                width: '72px',
+                height: '72px',
                 borderRadius: '50%',
-                background: '#166534',
-                boxShadow: '0 4px 10px rgba(22, 101, 52, 0.2)',
+                background: 'rgba(255,255,255,0.1)',
+                backdropFilter: 'blur(10px)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -37,9 +30,9 @@ const Stats = () => {
               }}>
                 {stat.icon}
               </div>
-              <h3 style={{ fontSize: '2.2rem', fontWeight: '900', color: '#111827', marginBottom: '0.4rem', lineHeight: '1' }}>{stat.value}</h3>
-              <p style={{ fontWeight: '700', fontSize: '1rem', color: '#1f2937', marginBottom: '0.3rem' }}>{stat.label}</p>
-              <p style={{ fontSize: '0.85rem', color: '#6b7280', lineHeight: '1.4', maxWidth: '160px' }}>{stat.sub}</p>
+              <h3 style={{ fontSize: '2.5rem', fontWeight: '900', color: '#ffffff', marginBottom: '0.4rem', lineHeight: '1' }}>{stat.value}</h3>
+              <p style={{ fontWeight: '700', fontSize: '1.1rem', color: '#e5e7eb', marginBottom: '0.3rem' }}>{stat.label}</p>
+              <p style={{ fontSize: '0.9rem', color: '#9ca3af', lineHeight: '1.4', maxWidth: '180px' }}>{stat.sub}</p>
             </div>
           ))}
         </div>

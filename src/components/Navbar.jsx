@@ -25,29 +25,29 @@ const Navbar = () => {
       </div>
 
       {/* Main Navbar */}
-      <nav className="navbar" style={{ padding: '0.8rem 0', background: 'white', borderBottom: '1px solid #f1f5f9' }}>
+      <nav className="navbar glass" style={{ padding: '0.8rem 0', position: 'sticky', top: 0, zIndex: 1000 }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
 
           <div className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
 
             <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
-              <span style={{ fontSize: '1.4rem', fontWeight: '800', color: 'var(--brand-primary)' }}>Nutrition Club</span>
-              <span style={{ fontSize: '0.65rem', color: 'var(--brand-accent)', fontWeight: '600' }}>Nutrition For Better Life</span>
+              <span style={{ fontSize: '1.4rem', fontFamily: 'Playfair Display, serif', fontWeight: '800', color: 'var(--brand-dark)' }}>Kumar Wellness</span>
+              <span style={{ fontSize: '0.75rem', fontWeight: '600', color: 'var(--brand-accent)', letterSpacing: '0.05em' }}>& Weight Management Coach</span>
             </div>
           </div>
 
           <ul className="nav-links" style={{ display: 'flex', gap: '2rem', margin: 0, padding: 0 }}>
-            <li><a href="#home" style={{ color: 'var(--brand-primary)', fontWeight: '600', borderBottom: '2px solid var(--brand-primary)', paddingBottom: '5px' }}>Home</a></li>
-            <li><a href="#about" style={{ color: 'var(--text-dark)', fontWeight: '600' }}>About Us</a></li>
-            <li><a href="#services" style={{ color: 'var(--text-dark)', fontWeight: '600' }}>Services</a></li>
-            <li><a href="#gallery" style={{ color: 'var(--text-dark)', fontWeight: '600' }}>Gallery</a></li>
-            <li><a href="#testimonials" style={{ color: 'var(--text-dark)', fontWeight: '600' }}>Testimonials</a></li>
-            <li><a href="#contact" style={{ color: 'var(--text-dark)', fontWeight: '600' }}>Contact</a></li>
+            <li><a href="#home" className="active">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
             <a href="https://wa.me/917975715244?text=Hi!%20I%20would%20like%20to%20get%20a%20free%20sample." target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-              <button className="btn top-cta-btn" style={{ background: 'var(--brand-dark)', color: 'white', padding: '0.6rem 1.2rem', borderRadius: '6px', fontSize: '0.9rem', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+              <button className="btn btn-primary top-cta-btn" style={{ padding: '0.7rem 1.4rem', fontSize: '0.95rem' }}>
                 Get Free Sample
               </button>
             </a>
@@ -63,7 +63,7 @@ const Navbar = () => {
         <ul className="mobile-nav-links">
           <li><a href="#home" onClick={() => setIsMobileMenuOpen(false)}>Home</a></li>
           <li><a href="#about" onClick={() => setIsMobileMenuOpen(false)}>About Us</a></li>
-          <li><a href="#services" onClick={() => setIsMobileMenuOpen(false)}>Specialties</a></li>
+          <li><a href="#services" onClick={() => setIsMobileMenuOpen(false)}>Services</a></li>
           <li><a href="#gallery" onClick={() => setIsMobileMenuOpen(false)}>Gallery</a></li>
           <li><a href="#testimonials" onClick={() => setIsMobileMenuOpen(false)}>Testimonials</a></li>
           <li><a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a></li>

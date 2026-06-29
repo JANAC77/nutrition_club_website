@@ -40,20 +40,9 @@ const Products = () => {
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
+        <div className="grid-4" style={{ gap: '2rem' }}>
           {productsList.map((product, idx) => (
-            <div key={idx} style={{ 
-              background: 'white', 
-              borderRadius: '16px', 
-              padding: '2rem', 
-              boxShadow: 'var(--shadow-md)', 
-              textAlign: 'center',
-              transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-              cursor: 'pointer'
-            }}
-            onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-10px)'; e.currentTarget.style.boxShadow = 'var(--shadow-lg)'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'var(--shadow-md)'; }}
-            >
+            <div key={idx} className="premium-card text-center">
               <div style={{ 
                 width: '80px', 
                 height: '80px', 
@@ -82,8 +71,8 @@ const Products = () => {
           ))}
         </div>
         
-        <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-          <button className="btn btn-primary" style={{ padding: '0.8rem 2rem', borderRadius: '8px', fontSize: '1rem' }}>
+        <div style={{ textAlign: 'center', marginTop: '4rem' }}>
+          <button className="btn btn-primary">
             View All Products
           </button>
         </div>

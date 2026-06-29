@@ -17,7 +17,7 @@ const WhyChooseUs = () => {
           <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: 'white', marginTop: '0.5rem' }}>Your Health is Our Priority</h2>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'center' }}>
+        <div className="grid-2 items-center" style={{ gap: '4rem' }}>
           <div>
             <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.05rem', marginBottom: '2rem' }}>
             We are committed to providing science-based nutrition guidance with a natural and holistic approach for long-term results.
@@ -28,9 +28,12 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+        <div className="grid-2" style={{ gap: '1.5rem' }}>
           {features.map((feature, idx) => (
-            <div key={idx} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', padding: '2rem', borderRadius: '15px', backdropFilter: 'blur(10px)' }}>
+            <div key={idx} className="glass-feature-card" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(212, 175, 55, 0.2)', padding: '2.5rem', borderRadius: '24px', backdropFilter: 'blur(15px)', transition: 'all 0.4s ease' }}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.background = 'rgba(255,255,255,0.08)'; e.currentTarget.style.borderColor = 'rgba(212, 175, 55, 0.5)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.borderColor = 'rgba(212, 175, 55, 0.2)'; }}
+            >
               <div style={{ marginBottom: '1.5rem' }}>{feature.icon}</div>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '0.8rem', color: 'white' }}>{feature.title}</h3>
               <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>{feature.desc}</p>

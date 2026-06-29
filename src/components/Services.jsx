@@ -19,14 +19,14 @@ const Services = () => {
           <h2 className="section-title">Expert Nutrition & Wellness Solutions</h2>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '1.8rem' }} className="services-grid">
+        <div className="grid-3 services-grid" style={{ gap: '1.8rem' }}>
           {servicesData.map((service, idx) => (
-            <div key={idx} style={{ background: 'white', padding: '1.5rem 1rem', borderRadius: '12px', textAlign: 'center', boxShadow: 'var(--shadow-md)', transition: 'var(--transition)' }} className="service-card-new">
-              <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: service.iconBg, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem auto' }}>
-                {React.cloneElement(service.icon, { size: 24 })}
+            <div key={idx} className="premium-card text-center">
+              <div style={{ width: '60px', height: '60px', borderRadius: '50%', background: service.iconBg, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem auto', transition: 'var(--transition)' }} className="service-icon-wrapper">
+                {React.cloneElement(service.icon, { size: 28 })}
               </div>
-              <h3 style={{ fontSize: '1rem', fontWeight: '700', marginBottom: '0.6rem', color: 'var(--text-dark)' }}>{service.title}</h3>
-              <p style={{ fontSize: '0.85rem', color: 'var(--text-gray)', lineHeight: '1.4' }}>{service.desc}</p>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: '800', marginBottom: '0.8rem', color: 'var(--text-dark)' }}>{service.title}</h3>
+              <p style={{ fontSize: '0.95rem', color: 'var(--text-gray)', lineHeight: '1.5' }}>{service.desc}</p>
             </div>
           ))}
         </div>

@@ -4,13 +4,13 @@ import heroBg from '../assets/images/hero-ayurveda-woman.png';
 
 const Home = () => {
   return (
-    <section id="home" style={{ padding: '5rem 0', overflow: 'hidden', background: '#fdfdfc' }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', alignItems: 'center' }}>
+    <section id="home" className="bg-gradient-soft" style={{ padding: '8rem 0', overflow: 'hidden' }}>
+      <div className="container grid-2 items-center">
 
         <div className="hero-text animate-fade-in-up" style={{ paddingRight: '2rem' }}>
-          <span style={{ fontStyle: 'italic', color: 'var(--brand-primary)', fontSize: '1.4rem', marginBottom: '0.2rem', display: 'block', fontWeight: '500' }}>Transform Your</span>
-          <h1 style={{ fontSize: '4.8rem', lineHeight: '1.05', color: 'var(--brand-primary)', marginBottom: '1.5rem', fontWeight: '800' }}>
-            <span style={{ color: '#111' }}>Health</span><br />Naturally
+          <span style={{ fontStyle: 'italic', fontFamily: 'Playfair Display, serif', color: 'var(--brand-accent)', fontSize: '1.8rem', marginBottom: '0.5rem', display: 'block', fontWeight: '500' }}>Transform Your</span>
+          <h1 style={{ fontSize: '5.5rem', lineHeight: '1.05', marginBottom: '1.5rem', fontWeight: '700' }}>
+            <span style={{ color: 'var(--brand-dark)' }}>Health</span><br /><span className="text-gradient">Naturally</span>
           </h1>
           <p style={{ fontSize: '1.05rem', color: '#555', marginBottom: '2.5rem', maxWidth: '480px', lineHeight: '1.6' }}>
             Personalized nutrition guidance, Ayurvedic solutions & wellness programs to help you live a healthier, happier and energetic life.
@@ -26,16 +26,16 @@ const Home = () => {
 
           <div style={{ display: 'flex', gap: '1rem' }}>
             <a href="https://wa.me/917975715244" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-              <button className="btn btn-primary" style={{ padding: '0.9rem 1.8rem', fontSize: '1rem', borderRadius: '8px', width: '100%' }}><MessageCircle size={18} /> WhatsApp Now</button>
+              <button className="btn btn-primary animate-pulse-glow" style={{ width: '100%' }}><MessageCircle size={18} /> WhatsApp Now</button>
             </a>
             <a href="#contact" style={{ textDecoration: 'none' }}>
-              <button className="btn btn-outline" style={{ padding: '0.9rem 1.8rem', fontSize: '1rem', borderRadius: '8px', color: 'var(--brand-primary)', borderColor: '#e2e8f0', width: '100%' }}><Calendar size={18} /> Book Free Consultation</button>
+              <button className="btn btn-outline" style={{ width: '100%' }}><Calendar size={18} /> Book Free Consultation</button>
             </a>
           </div>
         </div>
 
         <div className="hero-image animate-fade-in-up delay-200" style={{ position: 'relative', display: 'flex', justifyContent: 'flex-end' }}>
-          <img src={heroBg} alt="Healthy Lifestyle Ayurveda" style={{ width: '120%', maxWidth: 'none', objectFit: 'cover', transform: 'translateX(10%)' }} />
+          <img src={heroBg} alt="Healthy Lifestyle Ayurveda" className="animate-float" style={{ width: '120%', maxWidth: 'none', objectFit: 'cover', transform: 'translateX(10%)' }} />
         </div>
 
       </div>

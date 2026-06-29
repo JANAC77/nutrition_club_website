@@ -3,13 +3,13 @@ import React from 'react';
 const Contact = () => {
   return (
     <section id="contact" style={{ padding: '4rem 0', background: 'var(--brand-primary)', color: 'white' }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+      <div className="container grid-2 items-center" style={{ gap: '4rem' }}>
 
         <div>
           <h2 style={{ fontSize: '3.5rem', lineHeight: '1.1', fontWeight: '800', marginBottom: '1rem' }}>Get Your<br />Free Consultation</h2>
           <p style={{ fontSize: '1.1rem', marginBottom: '2rem', opacity: '0.9' }}>Take the first step towards a healthier you. Book your free consultation now!</p>
 
-          <div style={{ display: 'flex', gap: '2rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
             {['100% Free', 'No Obligation', 'Expert Advice'].map((item, idx) => (
               <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: '600', fontSize: '0.9rem' }}>
                 <span style={{ color: 'var(--brand-yellow)' }}>✓</span> {item}
@@ -26,13 +26,13 @@ const Contact = () => {
           </div>
 
           <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            <div style={{ display: 'flex', gap: '1.5rem' }}>
-              <input type="text" placeholder="Your Name" style={{ flex: 1, padding: '1rem', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '1rem', outline: 'none' }} />
-              <input type="tel" placeholder="Phone Number" style={{ flex: 1, padding: '1rem', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '1rem', outline: 'none' }} />
+            <div className="grid-2" style={{ gap: '1.5rem' }}>
+              <input type="text" placeholder="Your Name" style={{ width: '100%', padding: '1rem', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '1rem', outline: 'none' }} />
+              <input type="tel" placeholder="Phone Number" style={{ width: '100%', padding: '1rem', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '1rem', outline: 'none' }} />
             </div>
-            <div style={{ display: 'flex', gap: '1.5rem' }}>
-              <input type="email" placeholder="Email Address" style={{ flex: 1, padding: '1rem', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '1rem', outline: 'none' }} />
-              <select style={{ flex: 1, padding: '1rem', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '1rem', outline: 'none', color: '#64748b', backgroundColor: 'white' }}>
+            <div className="grid-2" style={{ gap: '1.5rem' }}>
+              <input type="email" placeholder="Email Address" style={{ width: '100%', padding: '1rem', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '1rem', outline: 'none' }} />
+              <select style={{ width: '100%', padding: '1rem', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '1rem', outline: 'none', color: '#64748b', backgroundColor: 'white' }}>
                 <option>Select Goal</option>
                 <option>Weight Loss</option>
                 <option>Weight Gain</option>
