@@ -4,6 +4,21 @@ import { Menu, X, Leaf } from 'lucide-react';
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const handleNavClick = (e, id) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    
+    // Update the URL to the new route without the '#'
+    window.history.pushState(null, '', id === 'home' ? '/' : `/${id}`);
+
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    } else if (id === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       {/* Topbar */}
@@ -28,7 +43,7 @@ const Navbar = () => {
       <nav className="navbar glass" style={{ padding: '0.8rem 0', position: 'sticky', top: 0, zIndex: 1000 }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
 
-          <a href="#home" className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', cursor: 'pointer' }}>
+          <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', cursor: 'pointer' }}>
 
             <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
               <span style={{ fontSize: '1.4rem', fontFamily: 'Playfair Display, serif', fontWeight: '800', color: 'var(--brand-dark)' }}>Kumar Wellness</span>
@@ -37,12 +52,12 @@ const Navbar = () => {
           </a>
 
           <ul className="nav-links" style={{ display: 'flex', gap: '2rem', margin: 0, padding: 0 }}>
-            <li><a href="home" className="active">Home</a></li>
-            <li><a href="about">About Us</a></li>
-            <li><a href="services">Services</a></li>
-            <li><a href="gallery">Gallery</a></li>
-            <li><a href="testimonials">Testimonials</a></li>
-            <li><a href="contact">Contact</a></li>
+            <li><a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="active">Home</a></li>
+            <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About Us</a></li>
+            <li><a href="#services" onClick={(e) => handleNavClick(e, 'services')}>Services</a></li>
+            <li><a href="#gallery" onClick={(e) => handleNavClick(e, 'gallery')}>Gallery</a></li>
+            <li><a href="#testimonials" onClick={(e) => handleNavClick(e, 'testimonials')}>Testimonials</a></li>
+            <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a></li>
           </ul>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
@@ -61,12 +76,12 @@ const Navbar = () => {
       {/* Mobile Menu Overlay */}
       <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <ul className="mobile-nav-links">
-          <li><a href="home" onClick={() => setIsMobileMenuOpen(false)}>Home</a></li>
-          <li><a href="about" onClick={() => setIsMobileMenuOpen(false)}>About Us</a></li>
-          <li><a href="services" onClick={() => setIsMobileMenuOpen(false)}>Services</a></li>
-          <li><a href="gallery" onClick={() => setIsMobileMenuOpen(false)}>Gallery</a></li>
-          <li><a href="testimonials" onClick={() => setIsMobileMenuOpen(false)}>Testimonials</a></li>
-          <li><a href="contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a></li>
+          <li><a href="#home" onClick={(e) => handleNavClick(e, 'home')}>Home</a></li>
+          <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About Us</a></li>
+          <li><a href="#services" onClick={(e) => handleNavClick(e, 'services')}>Services</a></li>
+          <li><a href="#gallery" onClick={(e) => handleNavClick(e, 'gallery')}>Gallery</a></li>
+          <li><a href="#testimonials" onClick={(e) => handleNavClick(e, 'testimonials')}>Testimonials</a></li>
+          <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a></li>
         </ul>
       </div>
     </>

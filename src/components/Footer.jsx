@@ -2,6 +2,20 @@ import React from 'react';
 import { Leaf, Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
+  const handleNavClick = (e, id) => {
+    e.preventDefault();
+    
+    // Update the URL to the new route without the '#'
+    window.history.pushState(null, '', id === 'home' ? '/' : `/${id}`);
+
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    } else if (id === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer style={{ background: 'var(--brand-dark)', color: 'white', paddingTop: '4rem', paddingBottom: '2rem' }}>
       <div className="container">
@@ -36,12 +50,12 @@ const Footer = () => {
           <div>
             <h4 style={{ fontSize: '1.2rem', fontWeight: '700', marginBottom: '1.5rem', color: 'var(--brand-accent)' }}>Quick Links</h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', color: 'rgba(255,255,255,0.8)', fontSize: '0.95rem' }}>
-              <li><a href="home">Home</a></li>
-              <li><a href="about">About Us</a></li>
-              <li><a href="services">Services</a></li>
-              <li><a href="products">Products</a></li>
-              <li><a href="gallery">Gallery</a></li>
-              <li><a href="contact">Contact Us</a></li>
+              <li><a href="#home" onClick={(e) => handleNavClick(e, 'home')} style={{ cursor: 'pointer' }}>Home</a></li>
+              <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')} style={{ cursor: 'pointer' }}>About Us</a></li>
+              <li><a href="#services" onClick={(e) => handleNavClick(e, 'services')} style={{ cursor: 'pointer' }}>Services</a></li>
+              <li><a href="#products" onClick={(e) => handleNavClick(e, 'products')} style={{ cursor: 'pointer' }}>Products</a></li>
+              <li><a href="#gallery" onClick={(e) => handleNavClick(e, 'gallery')} style={{ cursor: 'pointer' }}>Gallery</a></li>
+              <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} style={{ cursor: 'pointer' }}>Contact Us</a></li>
             </ul>
           </div>
 

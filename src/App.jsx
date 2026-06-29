@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Stats from './components/Stats';
@@ -12,6 +12,19 @@ import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
 
 function App() {
+  useEffect(() => {
+    // Automatically scroll to section if URL path matches (e.g. /about)
+    setTimeout(() => {
+      const path = window.location.pathname.substring(1);
+      if (path) {
+        const element = document.getElementById(path);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }, 100);
+  }, []);
+
   return (
     <>
       <Navbar />
